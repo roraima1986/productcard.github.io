@@ -1,0 +1,150 @@
+:root {
+    --text-principal: 'Montserrat', sans-serif;
+    --text-secondary: 'Fraunces', serif;
+    --cream: hsl(30, 38%, 92%);    
+    --green: hsl(158, 36%, 37%);
+    --green-hover: hsl(157, 69%, 15%);
+    --blue-dark: hsl(212, 21%, 14%);
+    --gray: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);    
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36rem;
+    min-height: 95vh;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;    
+    background-color: var(--white); 
+    border-radius: 1rem;
+}
+
+.image {
+    width: 18rem;
+    overflow: hidden;
+}
+
+.image-product-desktop {    
+    display: block;
+    border-radius: 1rem 0 0 1rem;       
+    width: 100%; 
+}
+
+.image-product-mobile {
+    display: none;  
+    width: 100%; 
+}
+
+.description-product {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 18rem;    
+}
+
+.category {
+    color: var(--gray);
+    font-family: var(--text-principal);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.name {
+    color: var(--blue-dark);
+    font-family: var(--text-secondary);
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.description {
+    color: var(--gray);
+    font-family: var(--text-principal);
+    font-weight: 400;    
+    font-size: 0.85rem;
+}
+
+.current-price {
+    color: var(--green);
+    font-family: var(--text-secondary);
+    font-weight: 700;
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.current-price .before-price {
+    font-family: var(--text-principal);
+    color: var(--gray);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-decoration: line-through;
+    margin-left: 0.75rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: var(--text-principal);
+    font-weight: 700;
+    cursor: pointer; 
+    transition: all 0.3s;   
+}
+
+.button:hover{
+    background-color: var(--green-hover);
+}
+
+.button img {
+    margin-right: 0.5rem;
+}
+
+/* Design mobile */
+@media screen and (max-width: 600px) {
+    .main {
+        width: 90%;       
+    }
+    
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .image, .description-product {
+        width: 100%;
+    }
+
+    .image-product-desktop {    
+        display: none;                 
+    }
+
+    .image-product-mobile {
+        display: block;          
+        border-radius: 1rem 1rem 0 0;
+    }
+}
+
+
+.attribution { font-size: 1rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
